@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HandsOnlyActivity">
+
+    <TextView
+        android:id="@+id/timetitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time : "
+        app:layout_constraintTop_toBottomOf="@id/scan_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@id/timetitle_tv"
+        app:layout_constraintTop_toBottomOf="@id/scan_btn"
+        />
+
+    <TextView
+        android:id="@+id/correctcounttitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CorrectCount : "
+        app:layout_constraintTop_toBottomOf="@id/timetitle_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/correctcount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@id/correctcounttitle_tv"
+        app:layout_constraintTop_toBottomOf="@id/timetitle_tv"/>
+
+    <TextView
+        android:id="@+id/totalcounttitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TotalCount : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/correctcounttitle_tv"/>
+
+    <TextView
+        android:id="@+id/totalcount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@id/totalcounttitle_tv"
+        app:layout_constraintTop_toBottomOf="@id/correctcounttitle_tv"/>
+        />
+
+    <Button
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connect_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintStart_toEndOf="@id/scan_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@id/ready_btn"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/ready_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:enabled="true"
+        app:layout_constraintStart_toEndOf="@id/connect_btn"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalcount_tv"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.2"
+        android:checkedButton="@id/sec30_radio">
+        <RadioButton
+            android:id="@+id/sec30_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Sec" />
+
+        <RadioButton
+            android:id="@+id/sec60_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60 Sec" />
+        <RadioButton
+            android:id="@+id/sec90_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90 Sec" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/statustitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@id/statustitle_tv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
